@@ -1,4 +1,5 @@
 # Import the required libraries
+from http.server import executable
 import os
 import undetected_chromedriver as uc
 import adal
@@ -6,7 +7,7 @@ from decouple import config, Config, RepositoryEnv
 import time
 import requests as rq
 
-DOTENV_FILE = os.getcwd() + "/.env"
+DOTENV_FILE = os.path.join(os.getcwd(), ".env")
 env_config = Config(RepositoryEnv(DOTENV_FILE))
 
 # Tenant ID for your Azure Subscription
@@ -94,7 +95,7 @@ if __name__ == '__main__':
     connection_name = str(input("Enter your connection name:"))
     bearerToken = getBearerToken()
     auth_link = getAuthLink(bearerToken)
-    driver = uc.Chrome()
+    driver = uc.Chrome(use_subprocess=True)
     driver.get(auth_link)
     redirect_url_prefix = "https://ema1.exp.azure.com/ema"
     redirect_url = ''
