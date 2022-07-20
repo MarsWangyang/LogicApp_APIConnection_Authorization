@@ -1,10 +1,13 @@
 # Import the required libraries
+import os
 import undetected_chromedriver as uc
 import adal
-from decouple import config
+from decouple import config, Config, RepositoryEnv
 import time
 import requests as rq
 
+DOTENV_FILE = os.getcwd() + "/.env"
+env_config = Config(RepositoryEnv(DOTENV_FILE))
 
 # Tenant ID for your Azure Subscription
 TENANT_ID = config('TENANT_ID')
