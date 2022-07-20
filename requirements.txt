@@ -19,9 +19,7 @@ proxy-tools==0.1.0
 pycodestyle==2.8.0
 pycparser==2.21
 PyJWT==2.4.0
-pyobjc-core==8.5
-pyobjc-framework-Cocoa==8.5
-pyobjc-framework-WebKit==8.5
+
 pyOpenSSL==22.0.0
 PySocks==1.7.1
 python-dateutil==2.8.2
