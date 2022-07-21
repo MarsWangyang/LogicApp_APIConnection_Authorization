@@ -1,4 +1,5 @@
 .env
-/venv
-/build
+*/venv
+*/build
 main.spec
+*/dist
