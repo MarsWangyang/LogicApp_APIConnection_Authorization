@@ -40,7 +40,6 @@ How to create a service principal? Check <a href="https://learn.microsoft.com/en
 3. open `main.py` and press F5 to run the code.
 4. Enter the information of your API connection.
 5. Done!
-   \
 
 ## Windwos Version
 
